@@ -1,0 +1,11 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://bdoapnnfbuqab"]
+
+[ext_resource type="Texture2D" uid="uid://qaoaq3muhxhf" path="res://Material Maker/Brick_Texture_Grey_orm.png" id="2"]
+
+[resource]
+albedo_color = Color(0.76052654, 0.63624483, 0.5878612, 1)
+roughness_texture = ExtResource("2")
+roughness_texture_channel = 1
+normal_enabled = true
+ao_enabled = true
+ao_texture = ExtResource("2")

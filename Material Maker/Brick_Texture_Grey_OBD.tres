@@ -1,0 +1,16 @@
+[gd_resource type="ORMMaterial3D" format=3 uid="uid://bhjdv8aq21f6"]
+
+[ext_resource type="Texture2D" uid="uid://c83erb1tb622m" path="res://Material Maker/Brick_Texture_Grey_OBD_albedo.png" id="1"]
+[ext_resource type="Texture2D" uid="uid://k37onsbpeqfd" path="res://Material Maker/Brick_Texture_Grey_OBD_orm.png" id="2"]
+[ext_resource type="Texture2D" uid="uid://b3nkblqpxaeoo" path="res://Material Maker/Brick_Texture_Grey_OBD_normal.png" id="2_y01ra"]
+
+[resource]
+albedo_color = Color(0.80049086, 0.80049074, 0.80049074, 1)
+albedo_texture = ExtResource("1")
+orm_texture = ExtResource("2")
+normal_enabled = true
+normal_scale = -2.56
+normal_texture = ExtResource("2_y01ra")
+uv1_scale = Vector3(0.065, 0.065, 0.065)
+uv1_triplanar = true
+uv1_triplanar_sharpness = 1.0000001

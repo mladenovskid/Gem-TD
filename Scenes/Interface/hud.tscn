@@ -1,0 +1,111 @@
+[gd_scene format=3 uid="uid://cjwgh5qxpqrl8"]
+
+[ext_resource type="Script" uid="uid://dgplx55w8idi1" path="res://Scripts/hud.gd" id="1_lqc7n"]
+
+[sub_resource type="FontFile" id="FontFile_1ef4w"]
+cache/0/variation_coordinates = {}
+cache/0/face_index = 0
+cache/0/embolden = 0.0
+cache/0/transform = Transform2D(1, 0, 0, 1, 0, 0)
+cache/0/spacing_top = 0
+cache/0/spacing_bottom = 0
+cache/0/spacing_space = 0
+cache/0/spacing_glyph = 0
+cache/0/baseline_offset = 0.0
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
+cache/0/20/0/ascent = 0.0
+cache/0/20/0/descent = 0.0
+cache/0/20/0/underline_position = 0.0
+cache/0/20/0/underline_thickness = 0.0
+cache/0/20/0/scale = 1.0
+
+[sub_resource type="LabelSettings" id="LabelSettings_l8qq6"]
+font = SubResource("FontFile_1ef4w")
+font_size = 20
+
+[node name="HUD" type="CanvasLayer" unique_id=755078443 groups=["hud"]]
+script = ExtResource("1_lqc7n")
+
+[node name="HUDRoot" type="Control" parent="." unique_id=2139757982]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="BottomBar" type="Panel" parent="HUDRoot" unique_id=1056868173]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.344
+anchor_top = 0.90700006
+anchor_right = 0.656
+anchor_bottom = 1.0
+offset_left = -0.4800415
+offset_top = 0.4399414
+offset_right = 0.47998047
+grow_horizontal = 2
+grow_vertical = 0
+mouse_filter = 2
+
+[node name="RoundLabel" type="Label" parent="HUDRoot/BottomBar" unique_id=2052065823]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -11.5
+offset_right = 40.0
+offset_bottom = 11.5
+grow_vertical = 2
+text = "Round 1"
+label_settings = SubResource("LabelSettings_l8qq6")
+
+[node name="BuildButton" type="Button" parent="HUDRoot/BottomBar" unique_id=2078082689]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -24.0
+offset_top = -15.5
+offset_right = 26.0
+offset_bottom = 34.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Build"
+
+[node name="GemPanel" type="Panel" parent="HUDRoot/BottomBar" unique_id=1553080443]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 356.0
+grow_horizontal = 0
+grow_vertical = 2
+
+[node name="GemRow" type="HBoxContainer" parent="HUDRoot/BottomBar/GemPanel" unique_id=940138969]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_bottom = -56.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ConfirmButton" type="Button" parent="HUDRoot/BottomBar/GemPanel" unique_id=932975214]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.48400003
+anchor_top = 0.44000003
+anchor_right = 0.689
+anchor_bottom = 1.0
+offset_left = -0.0960083
+offset_right = -0.115997314
+grow_horizontal = 2
+grow_vertical = 0

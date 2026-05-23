@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://bx8uxwwrjx3xd"]
+
+[ext_resource type="PackedScene" uid="uid://5jasekf64sg7" path="res://Blender/The_Pill.glb" id="1_uiuet"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8garo"]
+albedo_color = Color(0.07700001, 0.18083324, 0.7, 0.91764706)
+emission = Color(0.1552482, 0.22671786, 1, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_jmigv"]
+size = Vector3(8, 8, 8)
+
+[node name="The_Pill" unique_id=945042293 instance=ExtResource("1_uiuet")]
+
+[node name="Sphere" parent="." index="0" unique_id=999081500]
+transform = Transform3D(1, 0, 0, 0, 2.57, 0, 0, 0, 0.18, 0, 3, 0)
+surface_material_override/0 = SubResource("StandardMaterial3D_8garo")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." index="1" unique_id=52711651]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" index="0" unique_id=362140222]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4, 0)
+shape = SubResource("BoxShape3D_jmigv")

@@ -1,0 +1,55 @@
+[gd_scene format=3 uid="uid://b1b6qkrj7w3s4"]
+
+[ext_resource type="PackedScene" uid="uid://cktl80b6lokvv" path="res://Scenes/Map.tscn" id="1_idj7w"]
+[ext_resource type="Script" uid="uid://4evvih5yjjtv" path="res://Scripts/camera_rig.gd" id="2_kln2b"]
+[ext_resource type="PackedScene" uid="uid://cn0wdhgbrv8bv" path="res://Scenes/camera_3d.tscn" id="2_v1gob"]
+[ext_resource type="PackedScene" uid="uid://cjwgh5qxpqrl8" path="res://Scenes/Interface/hud.tscn" id="5_pbw6q"]
+[ext_resource type="Script" uid="uid://c4tma62ldq6yt" path="res://Scripts/placement_manager.gd" id="5_v1gob"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_idj7w"]
+ground_bottom_color = Color(0.09392362, 0.1408701, 0.16641599, 1)
+sun_angle_max = 88.97
+sun_curve = 0.2999998
+
+[sub_resource type="Sky" id="Sky_idj7w"]
+sky_material = SubResource("ProceduralSkyMaterial_idj7w")
+
+[sub_resource type="Environment" id="Environment_idj7w"]
+background_mode = 2
+sky = SubResource("Sky_idj7w")
+ambient_light_color = Color(0.72464263, 0.7246426, 0.7246426, 1)
+volumetric_fog_length = 10.0
+
+[node name="Main" type="Node3D" unique_id=171773712]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=49620640]
+environment = SubResource("Environment_idj7w")
+
+[node name="Map" parent="." unique_id=1357798335 instance=ExtResource("1_idj7w")]
+metadata/_edit_lock_ = true
+
+[node name="PlacementManager" type="Node3D" parent="." unique_id=1775994898]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19, -52, 57)
+script = ExtResource("5_v1gob")
+
+[node name="Camera3D" parent="." unique_id=1831896358 instance=ExtResource("2_v1gob")]
+transform = Transform3D(1, 0, 0, 0, 0.99999994, 0, 0, 0, 0.99999994, 124, 30, 310)
+fov = 94.2
+size = 83.5
+script = ExtResource("2_kln2b")
+pan_speed_keys = 40.0
+pan_speed_edge = 40.0
+pan_speed_drag = 0.15
+edge_margin = 10
+zoom_speed = 3.0
+zoom_y_min = 30.0
+zoom_y_max = 100.0
+pitch_lock_y = 100.0
+pitch_shallow_deg = -20.0
+pitch_steep_deg = -80.0
+bound_margin = 10.0
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=919079180]
+transform = Transform3D(0.80538034, 0, -0.5927584, 0.47107184, 0.60698754, 0.6400449, 0.35979697, -0.79471135, 0.48885584, 0, 112.115, 296.699)
+
+[node name="HUD" parent="." unique_id=755078443 instance=ExtResource("5_pbw6q")]

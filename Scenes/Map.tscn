@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://cktl80b6lokvv"]
+
+[ext_resource type="Material" uid="uid://bhjdv8aq21f6" path="res://Material Maker/Brick_Texture_Grey_OBD.tres" id="1_5y0ki"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_osio2"]
+material = ExtResource("1_5y0ki")
+size = Vector2(264, 264)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_uxgyn"]
+size = Vector3(264, 0.3, 264)
+
+[node name="Map" type="Node3D" unique_id=1357798335]
+
+[node name="Black Brick" type="MeshInstance3D" parent="." unique_id=758936163]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 132, 0.3, 132)
+mesh = SubResource("PlaneMesh_osio2")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Black Brick" unique_id=1754326759]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Black Brick/StaticBody3D" unique_id=1167754754]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.01, 0)
+shape = SubResource("BoxShape3D_uxgyn")

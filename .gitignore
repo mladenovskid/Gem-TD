@@ -1,0 +1,13 @@
+# Godot 4+ specific ignores
+.godot/
+/android/
+export_presets.cfg
+*.translation
+
+# Blender
+*.blend1
+__pycache__/
+
+# OS
+.DS_Store
+Thumbs.db

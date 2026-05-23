@@ -1,0 +1,22 @@
+[gd_resource type="ORMMaterial3D" format=3 uid="uid://cvypxg3wxfvlp"]
+
+[ext_resource type="Texture2D" uid="uid://ndd1ecniiscw" path="res://Material Maker/clumped_grass_albedo.png" id="1"]
+[ext_resource type="Texture2D" uid="uid://cqn4kbvgb7106" path="res://Material Maker/clumped_grass_orm.png" id="2"]
+[ext_resource type="Texture2D" uid="uid://bwm5qrvh5tl3e" path="res://Material Maker/clumped_grass_normal.png" id="3"]
+[ext_resource type="Texture2D" uid="uid://bivfpdecnaq61" path="res://Material Maker/clumped_grass_emission.png" id="5"]
+[ext_resource type="Texture2D" uid="uid://b437vs3nyy0uj" path="res://Material Maker/clumped_grass_sss.png" id="6"]
+
+[resource]
+albedo_texture = ExtResource("1")
+orm_texture = ExtResource("2")
+emission_enabled = true
+emission_texture = ExtResource("5")
+normal_enabled = true
+normal_scale = 2.14
+normal_texture = ExtResource("3")
+heightmap_scale = 16.0
+subsurf_scatter_enabled = true
+subsurf_scatter_strength = 1.0
+subsurf_scatter_texture = ExtResource("6")
+uv1_scale = Vector3(12.02, 12.02, 12.02)
+uv1_offset = Vector3(0.52, 0.385, 0)

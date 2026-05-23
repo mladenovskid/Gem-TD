@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://d3idxdonasgx4"]
+
+[ext_resource type="PackedScene" uid="uid://cwkrgqg58w1s8" path="res://Blender/Cube_Test.blend" id="1_kke2m"]
+[ext_resource type="Material" path="res://Material Maker/Brick_Texture_Grey_OBD.tres" id="2_ac607"]
+
+[node name="Node3D" type="Node3D" unique_id=1788075423]
+
+[node name="Cube_Test" parent="." unique_id=201494617 instance=ExtResource("1_kke2m")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.28549862, 0.9828365, 0.41738415)
+
+[node name="Cube" parent="Cube_Test" index="0" unique_id=2016349638]
+transform = Transform3D(1, 0, 0, 0, 0.011676002, -0.9999318, 0, 0.9999318, 0.011676002, 0, 0, 0)
+surface_material_override/0 = ExtResource("2_ac607")
+
+[editable path="Cube_Test"]

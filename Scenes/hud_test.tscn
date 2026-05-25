@@ -1,11 +1,12 @@
-[gd_scene format=3 uid="uid://cjwgh5qxpqrl8"]
+[gd_scene format=3 uid="uid://1p07m2g48icf"]
 
-[ext_resource type="Script" uid="uid://dgplx55w8idi1" path="res://Scripts/hud.gd" id="1_lqc7n"]
+[ext_resource type="Script" uid="uid://e3ioycx76f2b" path="res://hud_2.gd" id="1_j6o8x"]
+
+[sub_resource type="Theme" id="Theme_lqc7n"]
+/colors/BackgroundColor = Color(0.10293176, 0.0778834, 0.029936504, 1)
+/fonts/TExt = null
 
 [sub_resource type="FontFile" id="FontFile_1ef4w"]
-subpixel_positioning = 0
-msdf_pixel_range = 14
-msdf_size = 128
 cache/0/variation_coordinates = {}
 cache/0/face_index = 0
 cache/0/embolden = 0.0
@@ -31,7 +32,7 @@ font = SubResource("FontFile_1ef4w")
 font_size = 20
 
 [node name="HUD" type="CanvasLayer" unique_id=755078443 groups=["hud"]]
-script = ExtResource("1_lqc7n")
+script = ExtResource("1_j6o8x")
 
 [node name="HUDRoot" type="Control" parent="." unique_id=2139757982]
 layout_mode = 3
@@ -55,6 +56,7 @@ offset_right = -0.6401367
 grow_horizontal = 2
 grow_vertical = 0
 mouse_filter = 2
+theme = SubResource("Theme_lqc7n")
 
 [node name="RoundLabel" type="Label" parent="HUDRoot/BottomBar" unique_id=2052065823]
 layout_mode = 1
@@ -66,26 +68,32 @@ offset_top = 2.539997
 offset_right = -0.2400055
 offset_bottom = 0.03999901
 grow_vertical = 2
-mouse_filter = 1
 text = "Round 1"
 label_settings = SubResource("LabelSettings_l8qq6")
-metadata/_edit_use_anchors_ = true
 
 [node name="BuildButton" type="Button" parent="HUDRoot/BottomBar" unique_id=2078082689]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.2
-anchor_right = 0.3
-anchor_bottom = 0.53300005
-offset_top = 2.0
-offset_bottom = 2.0399933
+anchor_top = 0.467
+anchor_right = 0.3125
+anchor_bottom = 1.0
+offset_top = -0.040000916
 grow_horizontal = 2
 grow_vertical = 2
-mouse_filter = 1
-action_mode = 0
 text = "Build"
+metadata/_edit_use_anchors_ = true
 
-[node name="ConfirmButton" type="Button" parent="HUDRoot/BottomBar" unique_id=846135121]
-layout_mode = 0
-offset_right = 8.0
-offset_bottom = 8.0
+[node name="ConfirmButton" type="Button" parent="HUDRoot/BottomBar" unique_id=454404034]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.40046877
+anchor_top = 0.46666667
+anchor_right = 0.5109375
+anchor_bottom = 0.99966675
+offset_left = -0.3000183
+offset_bottom = 0.039993286
+grow_horizontal = 2
+grow_vertical = 2
+text = "Confirm"
+metadata/_edit_use_anchors_ = true

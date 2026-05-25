@@ -18,7 +18,7 @@ config/icon="res://icon.svg"
 [autoload]
 
 GridManager="*uid://dcn4jjkqoc53l"
-GemSystem="*uid://brn5uvvfeopye"
+BuildSystem="*uid://cv87pn715pq7"
 
 [display]
 
